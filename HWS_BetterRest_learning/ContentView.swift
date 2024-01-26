@@ -9,38 +9,34 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @State private var sleepHours = 8.0
     @State private var wakeUp = Date.now
-    
+    @State private var sleepAmount = 8.0
+    @State private var coffeeAmount = 1
     
     
     
     var body: some View {
         
-        Stepper("\(sleepHours.formatted()) hours", value: $sleepHours, in: 4...12, step: 0.5)
-            .padding()
-        DatePicker("Pleas take data and time wake up", selection: $wakeUp, in: ...Date.now, displayedComponents: .hourAndMinute)
-            .labelsHidden()
-        
-        Text(Date.now, format: .dateTime.hour().minute())
-
-        Text(Date.now, format: .dateTime.day().month().year())
-
-        Text(Date.now.formatted(date: .long, time: .shortened))
-
-        
+        NavigationStack {
+            VStack {
+                Text("When you want to wake up?")
+                    .font(.title)
+                DatePicker("Pick time to wake uo", selection: $wakeUp, displayedComponents: .hourAndMinute)
+                    .labelsHidden()
+                Text("Desired amount to sleep?")
+                    .font(.headline)
+                Stepper("\(sleepAmount.formatted()) hours", value: $sleepAmount, in: 4...12, step: 0.25)
+                Text("Daily coffee intake")
+                    .font(.headline)
+                Stepper("\(coffeeAmount) cup(s)", value: $coffeeAmount, in: 0...20)
+            }
+            .navigationTitle("Better Rest")
+            .toolbar {
+                Button ("Calculate", action: calculateBedTime)
+            }
+        }
     }
-    
-    
-    func exampleDates() {
-        let tomorrow = Date.now.addingTimeInterval(86400)
-
-        let range = Date.now...tomorrow
-        
-        let components = Calendar.current.dateComponents([.hour, .minute], from: .now)
-        let hour = components.hour ?? 0
-        let minute = components.minute ?? 0
-        let date = Calendar.current.date(from: components) ?? .now
+    func calculateBedTime(){
         
     }
     
