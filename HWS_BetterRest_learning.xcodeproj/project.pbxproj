@@ -11,6 +11,7 @@
 		1F3D2F5B2B603BF5005C5847 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F3D2F5A2B603BF5005C5847 /* ContentView.swift */; };
 		1F3D2F5D2B603C0A005C5847 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F3D2F5C2B603C0A005C5847 /* Assets.xcassets */; };
 		1F3D2F602B603C0A005C5847 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F3D2F5F2B603C0A005C5847 /* Preview Assets.xcassets */; };
+		1F9AD0712B643AEB004AFB8E /* SleepCalculator.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 1F9AD0702B643AEB004AFB8E /* SleepCalculator.mlmodel */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		1F3D2F5A2B603BF5005C5847 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		1F3D2F5C2B603C0A005C5847 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1F3D2F5F2B603C0A005C5847 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		1F9AD0702B643AEB004AFB8E /* SleepCalculator.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = SleepCalculator.mlmodel; path = HWS_BetterRest_learning/SleepCalculator.mlmodel; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +55,7 @@
 			children = (
 				1F3D2F582B603BF5005C5847 /* HWS_BetterRest_learningApp.swift */,
 				1F3D2F5A2B603BF5005C5847 /* ContentView.swift */,
+				1F9AD0702B643AEB004AFB8E /* SleepCalculator.mlmodel */,
 				1F3D2F5C2B603C0A005C5847 /* Assets.xcassets */,
 				1F3D2F5E2B603C0A005C5847 /* Preview Content */,
 			);
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F9AD0712B643AEB004AFB8E /* SleepCalculator.mlmodel in Sources */,
 				1F3D2F5B2B603BF5005C5847 /* ContentView.swift in Sources */,
 				1F3D2F592B603BF5005C5847 /* HWS_BetterRest_learningApp.swift in Sources */,
 			);
